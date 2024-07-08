@@ -7,10 +7,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      'connect-red': '#F5284A',
-    },
     extend: {
+      colors: {
+        'connect-red': '#F5284A',
+      },
       fontFamily: {
         sans: ['Inter']
       },

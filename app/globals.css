@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/font/Inter-Bold.ttf') format('ttf');
+  font-weight: Bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/font/Inter-Light.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/font/Inter-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: Medium;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/font/Inter-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: Regular;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -25,4 +54,9 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.custom-title {
+  font-family: 'Inter';
+  font-weight: Bold;
 }
