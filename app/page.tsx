@@ -1,7 +1,15 @@
 import Image from "next/image";
+import Header from "@/components/Header";
+import Body from "@/components/body";
 
-export default function Home() {
+const Page = () => {
   return (
-    <div></div>
+    <div>
+      <Header/>
+
+      <Body/>
+    </div>
   );
-}
+};
+
+export default Page;
