@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'connect-red': '#F5284A',
+        'second-text': '#888888',
       },
       fontFamily: {
         sans: ['Inter']
