@@ -11,7 +11,7 @@ const Body = () => {
           verification, trust factor, report- and ban-function and much more.
         </div>
       </div>
-    </div>
+    </div>  
   );
 };
 
