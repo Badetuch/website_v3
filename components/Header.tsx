@@ -3,8 +3,10 @@ import React from "react";
 import Image from 'next/image'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { useRouter } from "next/navigation";
 
 const Header: React.FC = () => {
+    const router = useRouter();
 
     const handleConnectClick = () => {
         Swal.fire({
@@ -43,6 +45,11 @@ const Header: React.FC = () => {
             }
         });
     };
+
+    const handleLogoClick = () => {
+        router.push('https://badespeak.net');
+    };
+
     return (
       <div className="container mx-auto justify-between flex items-center font-sans px-12 py-3 text-2xl">
         <div className="flex items-center">
@@ -54,10 +61,12 @@ const Header: React.FC = () => {
                 alt="Logo"
                 quality={100}
                 unoptimized= {true}
+                onClick={handleLogoClick}
+                className="cursor-pointer"
             />
         </div>
-        <span className="font-bold">BADE</span>
-        <span className="font-light">SPEAK</span>
+        <span className="font-bold cursor-pointer" onClick={handleLogoClick}>BADE</span>
+        <span className="font-light cursor-pointer" onClick={handleLogoClick}>SPEAK</span>
         </div>
         <div className="flex items-center text-right font-sans font-medium px-12 text-lg">
             <span className="px-2">Log in</span>
