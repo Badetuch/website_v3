@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             if (result.isConfirmed) {
                 window.location.href = 'ts3server://badespeak.net?port=9987';
                 Swal.fire({
-                    title: "Connected!",
+                    title: "CONNECTED!",
                     color: '#fff',
                     text: "Please confirm the connection popup in your browser. Have fun!",
                     icon: "success",
