@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         Swal.fire({
             title: 'WARNING',
             html: `
-            <div>
+            <div style="font-family: Inter, font-weight: Normal">
                 By connecting, you are accepting our <a href="/terms" target="_blank" style='color:#F5284A;'>Terms of Service</a> and <a href="/privacy" target="_blank" style='color:#F5284A;'>Privacy Policy</a>.
             </div>
         `,
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
             color: '#fff',
             showCancelButton: true,
             denyButtonText: 'Abort',
-            confirmButtonText: 'Connect',
+            confirmButtonText: 'CONNECT',
             confirmButtonColor: '#F5284A', 
             background: '#1A1A1B',
             customClass: {
@@ -30,8 +30,15 @@ const Header: React.FC = () => {
                 window.location.href = 'ts3server://badespeak.net?port=9987';
                 Swal.fire({
                     title: "Connected!",
-                    text: "Please confirm the connection popup in your browser",
+                    color: '#fff',
+                    text: "Please confirm the connection popup in your browser. Have fun!",
                     icon: "success",
+                    confirmButtonColor: '#F5284A', 
+                    background: '#1A1A1B',
+                    customClass: {
+                        title: 'custom-title',
+                    }
+
                 });
             }
         });

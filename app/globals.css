@@ -20,14 +20,14 @@
 @font-face {
   font-family: 'Inter';
   src: url('/font/Inter-Medium.ttf') format('ttf');
-  font-weight: normal;
+  font-weight: Normal;
   font-style: Medium;
 }
 
 @font-face {
   font-family: 'Inter';
   src: url('/font/Inter-Regular.ttf') format('ttf');
-  font-weight: normal;
+  font-weight: Normal;
   font-style: Regular;
 }
 
