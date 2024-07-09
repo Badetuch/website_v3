@@ -1,4 +1,7 @@
+"use client"
 import React from 'react';
+import { Button } from '@/components/ui/moving-border';
+
 
 const Body = () => {
   return (
@@ -10,6 +13,14 @@ const Body = () => {
           A community like no other with never seen before features, such as
           verification, trustfactor, report- and ban-function and much more.
         </div>
+        <div>
+      <Button
+        borderRadius="1rem"
+        className="bg-transparent text-white  border-connect-red "
+      >
+        JOIN NOW
+      </Button>
+    </div>
       </div>
       </div>
   );
