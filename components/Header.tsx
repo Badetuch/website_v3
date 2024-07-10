@@ -51,7 +51,7 @@ const Header: React.FC = () => {
     };
 
     return (
-      <div className="container mx-auto justify-between flex items-center px-12 py-3 text-2xl">
+      <div className="container mx-auto justify-between flex items-center px-12 py-3 text-[24px]">
         <div className="flex items-center">
             <div className="pr-3">
             <Image
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
         <span className="font-bold cursor-pointer" onClick={handleLogoClick}>BADE</span>
         <span className="font-light cursor-pointer" onClick={handleLogoClick}>SPEAK</span>
         </div>
-        <div className="flex items-center text-right font-medium px-12 text-lg">
+        <div className="flex items-center text-right font-medium px-12 text-[18px]">
             <span className="px-2">Log in</span>
         <button type="button" onClick={handleConnectClick} className="focus:outline-none text-white focus:ring-0 focus:ring-offset-0 font-bold rounded text-base px-4 py-1 ml-4 me-2 bg-connect-red hover:bg-rose-700">
             CONNECT
