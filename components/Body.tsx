@@ -22,7 +22,7 @@ const Body = () => {
       </Button>
       <Button
         borderRadius="1rem"
-        className="bg-white text-black font-normal text-[23px] active:bg-transparent"
+        className="bg-white text-black font-normal text-[23px] hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-5"
       >
         Live Viewer
       </Button>
