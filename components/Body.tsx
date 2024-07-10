@@ -1,9 +1,53 @@
 "use client"
 import React from 'react';
-import { Button } from '@/components/ui/moving-border';
+import { CustomButton } from '@/components/ui/moving-border';
+import { StaticButton } from './ui/staticButton';
+import Image from 'next/image';
+import Swal from 'sweetalert2'
+import { useRouter } from "next/navigation";
 
 
 const Body = () => {
+
+const handleConnectClick = () => {
+  Swal.fire({
+      title: 'WARNING',
+      html: `
+      <div style="font-weight: Normal">
+          By connecting, you are accepting our <a href="/terms" target="_blank" style='color:#F5284A;'>Terms of Service</a> and <a href="/privacy" target="_blank" style='color:#F5284A;'>Privacy Policy</a>.
+      </div>
+  `,
+      //text: 'By connecting, you are accepting our hrefToS and privacy policy. ',
+      icon: 'info',
+      color: '#fff',
+      showCancelButton: true,
+      denyButtonText: 'Abort',
+      confirmButtonText: 'CONNECT',
+      confirmButtonColor: '#F5284A', 
+      background: '#1A1A1B',
+      customClass: {
+          title: 'custom-title',
+      }
+  }).then((result) => {
+      if (result.isConfirmed) {
+          window.location.href = 'ts3server://badespeak.net?port=9987';
+          Swal.fire({
+              title: "CONNECTED!",
+              color: '#fff',
+              text: "Please confirm the connection popup in your browser. Have fun!",
+              icon: "success",
+              confirmButtonColor: '#F5284A', 
+              background: '#1A1A1B',
+              customClass: {
+                  title: 'custom-title',
+              }
+
+          });
+      }
+  });
+};
+
+
   return (
     <div className="py-64 px-4 mx-auto max-w-fit text-center">
       <div className='mb-4 leading-none md:text-5xl lg:text-6xl'>
@@ -14,18 +58,21 @@ const Body = () => {
           verification, trustfactor, report- and ban-function and much more.
         </div>
         <div>
-      <Button
+      <CustomButton
         borderRadius="1rem"
-        className="bg-transparent text-white font-normal text-[23px] border-connect-red hover:bg-connect-red"
+        onClick={handleConnectClick}
+        className="bg-transparent text-white font-normal text-[23px] border-connect-red hover:bg-connect-red active:bg-rose-800 transition-colors duration-200"
       >
+        <div className='pr-3'>
+        <Image src='/img/LOGO_white.png' alt='Icon' width={21} height={21} /></div>
         JOIN NOW
-      </Button>
-      <Button
+      </CustomButton>
+      <StaticButton
         borderRadius="1rem"
-        className="bg-white text-black font-normal text-[23px] hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-5"
+        className="bg-white pt-1 text-black font-normal text-[23px] hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-300"
       >
         Live Viewer
-      </Button>
+      </StaticButton>
     </div>
       </div>
       </div>
