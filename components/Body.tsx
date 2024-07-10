@@ -4,7 +4,6 @@ import { CustomButton } from '@/components/ui/moving-border';
 import { StaticButton } from './ui/staticButton';
 import Image from 'next/image';
 import Swal from 'sweetalert2'
-import { useRouter } from "next/navigation";
 
 
 const Body = () => {
@@ -69,12 +68,12 @@ const handleConnectClick = () => {
       </CustomButton>
       <StaticButton
         borderRadius="1rem"
-        className="bg-white pt-1 text-black font-normal text-[23px] hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-300"
+        className="bg-white shadow-[0_0px_30px_-4px_rgba(255,255,255,255)] pt-1 text-black font-normal text-[23px] hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-300"
       >
         Live Viewer
       </StaticButton>
-    </div>
       </div>
+    </div>
       </div>
   );
 };
