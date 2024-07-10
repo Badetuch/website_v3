@@ -4,7 +4,7 @@ import Body from "@/components/Body";
 
 const Page = () => {
   return (
-    <div >
+    <div>
       <Header/>
       <Body/>
     </div>
