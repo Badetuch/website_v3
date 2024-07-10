@@ -70,7 +70,7 @@ const Header: React.FC = () => {
         </div>
         <div className="flex items-center text-right font-medium px-12 text-lg">
             <span className="px-2">Log in</span>
-        <button type="button" onClick={handleConnectClick} className="focus:outline-none text-white hover:bg-rose-600 focus:ring-0 focus:ring-offset-0 font-bold rounded text-base px-4 py-1 ml-4 me-2 bg-connect-red hover:bg-rose-600">
+        <button type="button" onClick={handleConnectClick} className="focus:outline-none text-white focus:ring-0 focus:ring-offset-0 font-bold rounded text-base px-4 py-1 ml-4 me-2 bg-connect-red hover:bg-rose-700">
             CONNECT
             </button>
         </div>
