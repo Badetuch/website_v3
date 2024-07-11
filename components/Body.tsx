@@ -48,7 +48,7 @@ const handleConnectClick = () => {
 
 
   return (
-    <div className="py-64 px-4 mx-auto max-w-fit text-center">
+    <div className="py-64 px-4 mx-auto max-w-fit content-center text-center">
       <div className='mb-4 leading-none md:text-5xl lg:text-6xl'>
         <span className="text-[110px] text-red-500 font-bold">X </span>
         <span className="text-[110px] font-bold">online Users</span>
@@ -68,13 +68,13 @@ const handleConnectClick = () => {
       </CustomButton>
       <StaticButton
         borderRadius="1rem"
-        className="bg-white shadow-[0_0px_30px_-4px_rgba(255,255,255,255)] pt-1 text-black font-normal text-[23px] hover:border-transparent border-white hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-300 active:border"
+        className="bg-white mx-16 my-6 shadow-[0_0px_30px_-4px_rgba(255,255,255,255)] pt-1 text-black font-normal text-[23px] hover:border-transparent border-white hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-300 active:border"
       >
         Live Viewer
       </StaticButton>
       </div>
     </div>
-      </div>
+    </div>
   );
 };
 
