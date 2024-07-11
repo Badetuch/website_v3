@@ -60,7 +60,7 @@ const handleConnectClick = () => {
       <CustomButton
         borderRadius="1rem"
         onClick={handleConnectClick}
-        className="bg-transparent text-white font-normal text-[23px] border-connect-red hover:bg-connect-red active:bg-rose-800 transition-colors duration-200"
+        className="bg-transparent text-white font-normal text-[23px] border-connect-red hover:bg-connect-red active:bg-rose-800 transition-colors duration-300"
       >
         <div className='pr-3'>
         <Image src='/img/LOGO_white.png' alt='Icon' width={21} height={21} /></div>
