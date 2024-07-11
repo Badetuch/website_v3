@@ -21,7 +21,7 @@ export function StaticButton({
   return (
     <Component
       className={cn(
-        "p-[1px] bg-transparent text-xl h-[55px] w-[204px] border border-slate-800 backdrop-blur-xl text-white items-center justify-center",
+        "bg-transparent text-xl h-[55px] w-[204px] border border-slate-800 backdrop-blur-xl text-white items-center justify-center",
         className
       )}
       style={{
