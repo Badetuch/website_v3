@@ -22,7 +22,7 @@ const Header: React.FC = () => {
     return (
       <div className="container .sticky .top-0 mx-auto justify-between flex items-center px-12 py-3 text-[24px]">
         <div className="flex items-center">
-            <div className="pr-3">
+            <div className="pl-16 pr-3">
             <Image
                 src="/img/LOGO.png"
                 width={47}
