@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { BackgroundBeams } from './ui/background-beams'
 
 const Footer = () => {
   return (
@@ -33,6 +34,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
+            <BackgroundBeams/>
             <span className="block text-sm text-gray-500 sm:text-center">© 2024 Badespeak. All Rights Reserved.</span>
         </div>
         {/* <div className=" h-3 w-28 bg-white/[1] inset-x-0 rounded-full blur-2xl"></div> Radient Glow */}
