@@ -27,6 +27,9 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      borderWidth: {
+      '1': '0.25px',
+      },
       colors: {
         'connect-red': '#F5284A',
         'second-text': '#888888',
