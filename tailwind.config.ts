@@ -27,12 +27,16 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      blur:{
+        xs: '2px',
+      },
       borderWidth: {
       '1': '0.25px',
       },
       colors: {
         'connect-red': '#F5284A',
         'second-text': '#888888',
+        'light-red' : '#FDA4AF'
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

@@ -34,10 +34,9 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <BackgroundBeams/>
             <span className="block text-sm text-gray-500 sm:text-center">© 2024 Badespeak. All Rights Reserved.</span>
         </div>
-        {/* <div className=" h-3 w-28 bg-white/[1] inset-x-0 rounded-full blur-2xl"></div> Radient Glow */}
+         <div className="h-3 bg-light-red/[0.25] inset-x-0 rounded-full blur-2xl"></div> {/* Radient Glow */} 
     </footer>
 
 

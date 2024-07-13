@@ -11,7 +11,7 @@ const Body = () => {
   return (
     <div className="py-[260px] px-4 mx-auto max-w-fit content-center text-center">
       <div className='mb-4 leading-none md:text-5xl lg:text-6xl'>
-        <span className="text-[110px] text-red-500 font-bold">X </span>
+        <span className="text-[110px] text-connect-red font-bold">X </span>
         <span className="text-[110px] font-bold">online Users</span>
         <div className="text-[25px] py-3 tracking-normal leading-8 font-normal max-w-4xl text-second-text">
           A community like no other with never seen before features, such as
