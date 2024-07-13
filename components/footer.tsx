@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import { BackgroundBeams } from './ui/background-beams'
 
 const Footer = () => {
   return (
