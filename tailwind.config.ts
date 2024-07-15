@@ -28,7 +28,7 @@ const config: Config = {
   theme: {
     extend: {
       blur:{
-        xs: '2px',
+        xs: '0.25px',
       },
       borderWidth: {
       '1': '0.25px',
