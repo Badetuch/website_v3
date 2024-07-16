@@ -12,14 +12,18 @@ const Footer = () => {
       <hr className="border-[#151515] border-xs" />
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
+          <div className="md:mb-0">
             <a className="flex items-center">
-              <Image src="/img/LOGO_white.svg" width={40} height={39.51} className="h-8 me-3" alt="Badespeak Logo" />
-              <div className="self-center whitespace-nowrap">
+              <Image src="/img/LOGO_white.svg" width={40} height={39.51} className="h-10 me-3" alt="Badespeak Logo" />
+              <div className="self-center whitespace-normal">
                 <span className="font-bold text-[24px] cursor-pointer">BADE</span>
                 <span className="font-light text-[24px] cursor-pointer">SPEAK</span>
               </div>
             </a>
+            <div className='ps-1'>
+            <div className="font-light text-[13px] pt-2 pb-0 text-[#686868]">A project by <a href="https://x.com/badespeakowner" target='_blank' className="text-[#0070F3]">@badespeakowner</a></div>
+            <div className="font-light text-[13px] text-[#686868]">© 2024 Badespeak</div>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-28 sm:gap-28 sm:grid-cols-2">
             <div>
@@ -46,9 +50,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="font-light text-[14px] sm:text-center text-[#686868]">© 2024 Badespeak</span>
-          <span className="font-light text-[14px]">A project by <a href="html://x.com/badespeakowner" className="text-[#0070F3]">@badespeakowner</a></span>
+        {/* <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a href="https://x.com/badespeak" target='_blank' className="text-gray-500 hover:text-white ms-5">
               <IconContext.Provider value={{ color:"#686868", className: "contactIcon" }}>
@@ -61,7 +63,7 @@ const Footer = () => {
               </IconContext.Provider>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="h-3 bg-light-red/[0.25] inset-x-0 rounded-full blur-2xl"></div> {/* Radient Glow */}
     </footer>
