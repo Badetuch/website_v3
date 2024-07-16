@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="font-light text-[13px] text-[#686868]">© 2024 Badespeak</div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-28 sm:gap-28 sm:grid-cols-2">
+          <div className="grid grid-cols-3 gap-48 sm:gap-28 sm:grid-cols-3">
             <div>
               <h2 className="mb-2 text-[20px] font-bold text-white ">Links</h2>
               <ul className="text-[#686868] font-normal">
@@ -48,22 +48,23 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          
         </div>
-        {/* <div className="sm:flex sm:items-center sm:justify-between">
-          <div className="flex mt-4 sm:justify-center sm:mt-0">
+         <div className="sm:flex sm:items-center sm:justify-between">
+          <div className="flex mt-0 sm:justify-center mb-16">
             <a href="https://x.com/badespeak" target='_blank' className="text-gray-500 hover:text-white ms-5">
               <IconContext.Provider value={{ color:"#686868", className: "contactIcon" }}>
-                <FaXTwitter/>
+                <FaXTwitter size={20}/>
               </IconContext.Provider>
             </a>
             <a href="https://github.com/Badespeak" target="_blank" className="text-gray-500 hover:text-white ms-5">
             <IconContext.Provider value={{ color:"#686868", className: "contactIcon" }}>
-                <IoLogoGithub/>
+                <IoLogoGithub size={20}/>
               </IconContext.Provider>
             </a>
+            </div>
           </div>
-        </div> */}
+        </div> 
       </div>
       <div className="h-3 bg-light-red/[0.25] inset-x-0 rounded-full blur-2xl"></div> {/* Radient Glow */}
     </footer>

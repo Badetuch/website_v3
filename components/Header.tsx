@@ -27,7 +27,7 @@ const Header: React.FC = () => {
 
 
     return (
-        <div className={`sticky top-0 z-50 transition duration-500 ${isScrolled ? ' bg-opacity-70 backdrop-blur-xs' : ''}`}>
+        <div className={`sticky top-0 z-50 transition duration-500 ${isScrolled ? ' bg-opacity-70 backdrop-blur-sm' : ''}`}>
             <div className="container mx-auto justify-between flex items-center px-12 py-3 text-[24px]">
                 <div className="flex items-center">
                     <div className="pl-16 pr-3">
