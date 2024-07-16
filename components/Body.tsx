@@ -30,7 +30,7 @@ const Body = () => {
             </CustomButton>
             <StaticButton
               borderRadius="1rem"
-              className="bg-white ml-16 my-6 shadow-[0_0px_30px_-4px_rgba(255,255,255,255)] pt-1 text-black font-normal text-[23px] hover:border-transparent border-white hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-300 active:border"
+              className="bg-white ml-16 my-6 shadow-[0_0px_30px_-4px_rgba(255,255,255,255)] pt-1 text-black font-normal text-[23px] hover:border-transparent border-white hover:text-white hover:bg-transparent active:border-white active:text-white transition-colors duration-300 active:border pb-1"
               onClick={handleLiveViewerClick}
             >
               Live Viewer
