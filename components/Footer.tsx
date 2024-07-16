@@ -41,7 +41,7 @@ const Footer = () => {
               <h2 className="mb-2 text-[20px] font-bold text-white ">About Us</h2>
               <ul className="text-[#686868] font-normal">
                 <li className="mb-1">
-                  <a href="https://github.com/Badespeak" className="hover:underline hover:text-white">Imprint</a>
+                  <a href="https://Badespeak.net/imprint" className="hover:underline hover:text-white">Imprint</a>
                 </li>
                 <li>
                   <a href="https://Badespeak.net/privacy-policy" className="hover:underline hover:text-white">Privacy Policy</a>
