@@ -52,3 +52,7 @@ body {
 .custom-title {
   font-weight: Bold;
 }
+
+.contactIcon:hover {
+  fill: #fff;
+}

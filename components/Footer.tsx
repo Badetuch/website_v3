@@ -1,5 +1,10 @@
+"use client"
+
 import React from 'react';
 import Image from 'next/image';
+import { IconContext } from 'react-icons';
+import { FaXTwitter } from 'react-icons/fa6';
+import { IoLogoGithub } from 'react-icons/io';
 
 const Footer = () => {
   return (
@@ -42,10 +47,14 @@ const Footer = () => {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 Badespeak</span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a href="https://x.com/badespeak" target='_blank' className="text-gray-500 hover:text-white ms-5">
-              <Image src="/img/x_logo.svg" width={20} height={20} alt="X Logo" />
+              <IconContext.Provider value={{ color:"#686868", className: "contactIcon" }}>
+                <FaXTwitter/>
+              </IconContext.Provider>
             </a>
             <a href="https://github.com/Badespeak" target="_blank" className="text-gray-500 hover:text-white ms-5">
-              <Image src="/img/github_logo.svg" width={20} height={20} alt="GitHub Logo" />
+            <IconContext.Provider value={{ color:"#686868", className: "contactIcon" }}>
+                <IoLogoGithub/>
+              </IconContext.Provider>
             </a>
           </div>
         </div>
