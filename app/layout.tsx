@@ -10,17 +10,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Badespeak.net - Public TeamSpeak Server",
-  description: "Badespeak.net - Get your free channel today!",
+  description: "Get your free channel today! 24/7 DDoS Protection",
   openGraph: {
     title: "Badespeak.net - Public TeamSpeak Server",
-    description: "Badespeak.net - Get your free channel today!",
+    description: "Get your free channel today! 24/7 DDoS Protection",
     url: 'https://Badespeak.net',
     siteName: 'Badespeak.net',
     images: [
       {
         url: 'LOGO.png',
-        width: 500,
-        height: 500,
+        width: 300,
+        height: 300,
       },
     ]
   }
@@ -33,14 +33,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <SpeedInsights/>
+      <head>
+        <meta name="theme-color" content="#f5284a" />
+      </head>
+      <SpeedInsights />
       <body className={inter.className}>
-      <div>
-      <BackgroundBeams/>
-      <Header/>
-      {children}
-      <Footer/>
-      </div>
+        <div>
+          <BackgroundBeams />
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
