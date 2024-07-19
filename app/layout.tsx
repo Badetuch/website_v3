@@ -9,6 +9,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  title: "Badespeak.net - Public TeamSpeak Server",
+  description: "Badespeak.net - Get your free channel today!",
   openGraph: {
     title: "Badespeak.net - Public TeamSpeak Server",
     description: "Badespeak.net - Get your free channel today!",
