@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'Badespeak.net',
     images: [
       {
-        url: '/img/LOGO.srv',
+        url: 'LOGO.png',
         width: 500,
         height: 500,
       },
