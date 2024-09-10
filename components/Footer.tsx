@@ -33,7 +33,7 @@ const Footer = () => {
                   <a href="https://Badespeak.net/ts3-rules" className="hover:underline hover:text-white">TeamSpeak Rules</a>
                 </li>
                 <li>
-                  <a href="https://status.badespeak.net" className="hover:underline hover:text-white">Status</a>
+                  <a href="https://status.badespeak.net/status/awsec2" target='_blank' className="hover:underline hover:text-white">Status</a>
                 </li>
               </ul>
             </div>

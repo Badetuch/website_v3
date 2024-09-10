@@ -40,9 +40,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <div>
           <BackgroundBeams />
-          <Header />
+             <Header />
           {children}
-          <Footer />
+          <Footer /> 
         </div>
       </body>
     </html>
