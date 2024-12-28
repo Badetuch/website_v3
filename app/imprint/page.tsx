@@ -10,7 +10,7 @@ const Imprint = () => {
             If you have any questions, feel free to contact us at 
             <a
               href="mailto:hello@badespeak.net"
-              className="text-[#0070F3]"
+              className="text-[#0070F3] hover:underline"
               style={{ marginLeft: '5px' }}
             >
               hello@badespeak.net
