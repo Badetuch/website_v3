@@ -53,6 +53,17 @@ export const BackgroundBeams = React.memo(
     return (
       
       <div
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: -1, /* Ensure it is in the background */
+        pointerEvents: 'none', /* Prevent interference with clicks */
+      }}
+    
+
         className={cn(
           "absolute  h-full w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center",
           className

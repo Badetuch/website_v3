@@ -38,11 +38,11 @@ export default function RootLayout({
       </head>
       <SpeedInsights />
       <body className={inter.className}>
-        <div>
-          <BackgroundBeams />
-             <Header />
+        <div className="relative">
+          <Header />
           {children}
-          <Footer /> 
+          <BackgroundBeams /> {/* Background stays in the background */}
+          <Footer />
         </div>
       </body>
     </html>
