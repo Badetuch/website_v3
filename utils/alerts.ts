@@ -43,7 +43,7 @@ export const handleConnectClick = () => {
 export const handleLiveViewerClick = () => {
   const div = document.createElement("div");
   div.setAttribute("class", "ts3index-viewer");
-  div.setAttribute("data-serverid", "298545");
+  div.setAttribute("data-serverid", "303672");
   div.setAttribute("data-autoreload", "true");
   div.setAttribute("data-style", "bgcolor=1A1A1B&font=Verdana&color=FFFFFF");
 
