@@ -29,11 +29,11 @@ const Footer = () => {
             <div>
               <h2 className="mb-2 text-[20px] font-bold text-white ">Links</h2>
               <ul className="text-[#686868] font-normal">
-                <li className="hover:underline hover:text-white">
+                <li className="hover:text-white">
                   <a href="https://status.badespeak.net/" target='_blank' >Status <span className='text-[#0070F3]'>• Healthy</span></a>
                 </li>
                 <li className="mb-1">
-                  <a href="https://Badespeak.net/ts3-rules" className="hover:underline hover:text-white">TeamSpeak Rules</a>
+                  <a href="https://Badespeak.net/ts3-rules" className="hover:text-white">TeamSpeak Rules</a>
                 </li>
               </ul>
             </div>
@@ -41,10 +41,10 @@ const Footer = () => {
               <h2 className="mb-2 text-[20px] font-bold text-white ">About Us</h2>
               <ul className="text-[#686868] font-normal">
                 <li className="mb-1">
-                  <a href="https://Badespeak.net/imprint" className="hover:underline hover:text-white">Imprint</a>
+                  <a href="https://Badespeak.net/imprint" className="hover: hover:text-white">Imprint</a>
                 </li>
                 <li>
-                  <a href="https://Badespeak.net/privacy-policy" className="hover:underline hover:text-white">Privacy Policy</a>
+                  <a href="https://Badespeak.net/privacy-policy" className=" hover:text-white">Privacy Policy</a>
                 </li>
               </ul>
             </div>
