@@ -14,8 +14,8 @@ const Body = () => {
           <span className="text-[110px] text-connect-red font-bold">X </span>
           <span className="text-[110px] font-bold">online Users</span>
           <div className="text-[25px] py-3 tracking-normal leading-8 font-normal max-w-4xl text-second-text">
-            A community like no other with never seen before features, such as
-            verification, trustfactor, report- and ban-function and much more.
+            A community like no other with innovative features, such as
+            verification, trustfactor, report-function and much more.
           </div>
           <div>
             <CustomButton
