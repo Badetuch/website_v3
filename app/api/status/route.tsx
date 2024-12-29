@@ -7,6 +7,8 @@ export async function POST(req: Request) {
   // Extract data from the incoming webhook
   const { msg, status, name } = body;
 
+  console.log('Webhook received:', body);
+
   console.log(`Webhook received: ${msg}, ${status}, ${name}`);
 
   // Respond to Uptime Kuma
