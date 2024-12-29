@@ -15,7 +15,7 @@ const Footer = () => {
       try {
         const res = await fetch('/api/status');
         const data = await res.json();
-        setStatus(data.status === 'healthy' ? 'Status - Healthy' : 'Status - Unhealthy');
+        setStatus(data.status === 'healthy' ? 'Healthy' : 'Unhealthy');
       } catch (error) {
         console.error('Failed to fetch status:', error);
         setStatus('Status - Unknown');
