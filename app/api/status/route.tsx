@@ -18,6 +18,9 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { heartbeat, monitor } = body;
 
+  // Log the complete incoming API request
+  console.log('Incoming API POST payload:', JSON.stringify(body, null, 2));
+
   if (heartbeat && monitor) {
     const monitorID = heartbeat.monitorID;
     const status = heartbeat.status; // 0 for down, 1 for up
