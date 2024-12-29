@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 import { useRouter } from "next/navigation";
 import { handleConnectClick } from "@/utils/alerts";
-import { AnimatedTooltip } from "./ui/animated-tooltip";
+import {Tooltip} from "@nextui-org/tooltip";
 
 const Header: React.FC = () => {
     const router = useRouter();
     const [isScrolled, setIsScrolled] = useState(false);
 
     const handleLogoClick = () => {
-        router.push('https://badespeak.net');
+        return <link href='/'/>
     };
 
     useEffect(() => {
@@ -25,6 +25,22 @@ const Header: React.FC = () => {
         };
     }, []);
 
+    const placements = [
+        "top-start",
+        "top",
+        "top-end",
+        "bottom-start",
+        "bottom",
+        "bottom-end",
+        "left-start",
+        "left",
+        "left-end",
+        "right-start",
+        "right",
+        "right-end",
+      ];
+
+      const colors = ["default", "primary", "secondary", "success", "warning", "danger", "foreground"];
 
     return (
         <div className={`sticky top-0 z-50 transition duration-500 ${isScrolled ? ' bg-opacity-70 backdrop-blur-sm' : ''}`}>
@@ -46,9 +62,21 @@ const Header: React.FC = () => {
                     <span className="font-light cursor-pointer" onClick={handleLogoClick}>SPEAK</span>
                 </div>
                 <div className="flex items-center text-right font-medium px-12 text-[18px]">
-                    <div className="relative mr-2">
-                        Log In
-                    </div>
+                <div className="relative mr-2">
+                    <Tooltip
+                        content={
+                            <div className="flex items-center justify-center h-full">
+                                Coming soon
+                            </div>
+                        }
+                    showArrow={true}
+                    placement="bottom"
+                    size="sm"
+                    className="bg-tooltip-grey bg-opacity-60 text-white rounded-md shadow-xl text-sm h-7 w-28">
+                        <span className="cursor-pointer">Log In</span>
+                    </Tooltip>
+                </div>
+
                     <button
                         type="button"
                         onClick={handleConnectClick}

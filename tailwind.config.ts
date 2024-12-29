@@ -36,7 +36,8 @@ const config: Config = {
       colors: {
         'connect-red': '#F5284A',
         'second-text': '#888888',
-        'light-red' : '#FDA4AF'
+        'light-red' : '#FDA4AF',
+        'tooltip-grey' : '#18191a'
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
