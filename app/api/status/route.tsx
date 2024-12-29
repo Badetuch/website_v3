@@ -1,15 +1,14 @@
-// app/api/status/route.ts
 import { NextResponse } from 'next/server';
 
-const ALLOWED_IPS = ['3.127.166.71', '2a05:d014:a7d:8500:84ad:84a9:1b29:91d9']; // Replace with your Uptime Kuma server's IP
+// Store the status of monitors in memory
+const monitorStatuses = new Map<number, boolean>(); // Map<MonitorID, IsHealthy>
+
+const ALLOWED_IPS = ['3.127.166.71', '2a05:d014:a7d:8500:84ad:84a9:1b29:91d9'];
 
 export async function POST(req: Request) {
-  // Get the IP address of the sender
-  const ip =
-    req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip');
+  const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip');
 
   if (!ip || !ALLOWED_IPS.includes(ip as string)) {
-    console.error(`Unauthorized access attempt from IP: ${ip}`);
     return NextResponse.json(
       { error: 'Unauthorized: IP not allowed' },
       { status: 403 }
@@ -17,18 +16,23 @@ export async function POST(req: Request) {
   }
 
   const body = await req.json();
+  const { heartbeat, monitor } = body;
 
-  // Extract data from the incoming webhook
-  const { msg, status, name } = body;
+  if (heartbeat && monitor) {
+    const monitorID = heartbeat.monitorID;
+    const status = heartbeat.status; // 0 for down, 1 for up
 
-  console.log('Webhook received:', body);
-  console.log(`Webhook received: ${msg}, ${status}, ${name}`);
+    // Update the monitor's status
+    monitorStatuses.set(monitorID, status === 1);
 
-  // Respond to Uptime Kuma
+    console.log(`Monitor ${monitor.name} (${monitorID}) is now ${status === 1 ? 'healthy' : 'unhealthy'}`);
+  }
+
   return NextResponse.json({ message: 'Webhook received successfully!' });
 }
 
 export async function GET() {
-  // Optional: Handle GET requests for testing purposes
-  return NextResponse.json({ message: 'Status endpoint is live!' });
+  // Determine the overall system status
+  const isHealthy = Array.from(monitorStatuses.values()).every((status) => status);
+  return NextResponse.json({ status: isHealthy ? 'healthy' : 'unhealthy' });
 }
