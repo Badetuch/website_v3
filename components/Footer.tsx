@@ -59,7 +59,7 @@ const Footer = () => {
               <ul className="text-[#686868] font-normal">
                 <li className="hover:text-white">
                   <a href="https://status.badespeak.net/" target="_blank">
-                    Status <span className={status === 'Status - Healthy' ? 'text-[#0070F3]' : 'text-[#F00]'}>• {status}</span>
+                    Status <span className={status === 'Healthy' ? 'text-[#0070F3]' : 'text-[#F00]'}>• {status}</span>
                   </a>
                 </li>
                 <li className="mb-1">
