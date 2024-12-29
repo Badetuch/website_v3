@@ -86,7 +86,9 @@ body {
   pointer-events: none; /* Prevents it from blocking interactions */
 }
 
-.all-unset {
-  all: unset;
+.nextui-popover-arrow {
+  display: block !important;
+  background-color: var(--nextui-popover-bg, #fff);
 }
+
 

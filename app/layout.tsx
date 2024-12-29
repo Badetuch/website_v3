@@ -41,7 +41,7 @@ export default function RootLayout({
         <div className="relative">
           <Header />
           {children}
-          <BackgroundBeams /> {/* Background stays in the background */}
+          <BackgroundBeams /> 
           <Footer />
         </div>
       </body>

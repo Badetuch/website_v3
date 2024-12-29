@@ -5,7 +5,15 @@ import { useRouter } from "next/navigation";
 import { handleConnectClick } from "@/utils/alerts";
 import {Tooltip} from "@nextui-org/tooltip";
 import {Popover, PopoverTrigger, PopoverContent} from "@nextui-org/popover";
+import { connect } from "http2";
 
+const content = (
+    <PopoverContent>
+    <div className="items-center justify-center h-full ml-3">
+        <div className="text-small font-bold">Coming Soon</div>
+        <div className="text-tiny">Stay tuned <a href="https://x.com/badespeak" target="_blank" className="text-[#0070F3]">@badespeak</a></div></div>
+    </PopoverContent>
+    );
 
 const Header: React.FC = () => {
     const router = useRouter();
@@ -64,16 +72,12 @@ const Header: React.FC = () => {
                     <span className="font-light cursor-pointer" onClick={handleLogoClick}>SPEAK</span>
                 </div>
                 <div className="flex items-center text-right font-medium px-12 text-[18px]">
-                <Popover placement="bottom" showArrow={true} className="bg-tooltip-grey bg-opacity-80 text-white rounded-md shadow-xl w-52 showArrow=true">
-                <PopoverTrigger>
-                        <span className="cursor-pointer relative mr-2">Log In</span>
-                </PopoverTrigger>
-                <PopoverContent>
-                    <div className="items-center justify-center h-full ml-3">
-                        <div className="text-small font-bold">Coming Soon</div>
-                         <div className="text-tiny">Stay tuned <a href="https://x.com/badespeak" target="_blank" className="text-[#0070F3]">@badespeak</a></div></div>
-                </PopoverContent>
-                </Popover>
+                        <Popover color="primary" placement="bottom" showArrow={true} >
+                            <PopoverTrigger>
+                                <span className="cursor-pointer relative mr-2">Log In</span>
+                            </PopoverTrigger>
+                            {content}
+                        </Popover>
                     <button
                         type="button"
                         onClick={handleConnectClick}
