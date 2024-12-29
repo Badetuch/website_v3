@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/button": "^2.0.34",
+    "@nextui-org/tooltip": "^2.2.6",
     "@vercel/speed-insights": "^1.0.12",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.2",

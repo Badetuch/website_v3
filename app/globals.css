@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -83,5 +84,9 @@ body {
   height: 100%;
   z-index: -1; /* Puts it behind everything else */
   pointer-events: none; /* Prevents it from blocking interactions */
+}
+
+.all-unset {
+  all: unset;
 }
 
