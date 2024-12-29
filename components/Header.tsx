@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useRouter } from "next/navigation";
 import { handleConnectClick } from "@/utils/alerts";
 import {Tooltip} from "@nextui-org/tooltip";
+import {Popover, PopoverTrigger, PopoverContent} from "@nextui-org/popover";
+
 
 const Header: React.FC = () => {
     const router = useRouter();
@@ -62,21 +64,16 @@ const Header: React.FC = () => {
                     <span className="font-light cursor-pointer" onClick={handleLogoClick}>SPEAK</span>
                 </div>
                 <div className="flex items-center text-right font-medium px-12 text-[18px]">
-                <div className="relative mr-2">
-                    <Tooltip
-                        content={
-                            <div className="flex items-center justify-center h-full">
-                                Coming soon
-                            </div>
-                        }
-                    showArrow={true}
-                    placement="bottom"
-                    size="sm"
-                    className="bg-tooltip-grey bg-opacity-60 text-white rounded-md shadow-xl text-sm h-7 w-28">
-                        <span className="cursor-pointer">Log In</span>
-                    </Tooltip>
-                </div>
-
+                <Popover placement="bottom" showArrow={true} className="bg-tooltip-grey bg-opacity-80 text-white rounded-md shadow-xl w-52">
+                <PopoverTrigger>
+                        <span className="cursor-pointer relative mr-2">Log In</span>
+                </PopoverTrigger>
+                <PopoverContent>
+                    <div className="items-center justify-center h-full ml-3">
+                        <div className="text-small font-bold">Coming Soon</div>
+                         <div className="text-tiny">Stay tuned <a href="https://x.com/badespeak" target="_blank" className="text-[#0070F3]">@badespeak</a></div></div>
+                </PopoverContent>
+                </Popover>
                     <button
                         type="button"
                         onClick={handleConnectClick}
