@@ -64,7 +64,7 @@ const Header: React.FC = () => {
                     <span className="font-light cursor-pointer" onClick={handleLogoClick}>SPEAK</span>
                 </div>
                 <div className="flex items-center text-right font-medium px-12 text-[18px]">
-                <Popover placement="bottom" showArrow={true} className="bg-tooltip-grey bg-opacity-80 text-white rounded-md shadow-xl w-52">
+                <Popover placement="bottom" showArrow={true} className="bg-tooltip-grey bg-opacity-80 text-white rounded-md shadow-xl w-52 showArrow=true">
                 <PopoverTrigger>
                         <span className="cursor-pointer relative mr-2">Log In</span>
                 </PopoverTrigger>
