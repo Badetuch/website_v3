@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { IconContext } from 'react-icons';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoLogoGithub } from 'react-icons/io';
+import Link from 'next/link'
 
 
 const Footer = () => {
@@ -59,23 +60,23 @@ const Footer = () => {
               <ul className="text-[#686868] font-normal">
                 <li className="hover:text-white">
                   <a href="https://status.badespeak.net/" target="_blank">
-                    Status <span className={status === 'Healthy' ? 'text-[#0070F3]' : 'text-[#F00]'}>• {status}</span>
+                    Status <span className={ status === 'Healthy' ? 'text-[#0070F3]' : 'text-[#F00] '}>• {status}</span>
                   </a>
                 </li>
-                <li className="mb-1">
-                  <a href="https://Badespeak.net/ts3-rules" className="hover:text-white">
-                    TeamSpeak Rules
-                  </a>
+                <li className="mb-1 hover:text-white">
+                  <Link href="/rulebook">
+                    Server Rulebook
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-2 text-[20px] font-bold text-white">About Us</h2>
               <ul className="text-[#686868] font-normal">
-                <li className="mb-1">
-                  <a href="https://Badespeak.net/imprint" className="hover: hover:text-white">
+                <li className="mb-1 hover:text-white">
+                  <Link href="/imprint">
                     Imprint
-                  </a>
+                    </Link>
                 </li>
                 <li>
                   <a href="https://Badespeak.net/privacy-policy" className="hover:text-white">
