@@ -1,7 +1,7 @@
 // app/api/status/route.ts
 import { NextResponse } from 'next/server';
 
-const ALLOWED_IPS = ['3.127.166.71']; // Replace with your Uptime Kuma server's IP
+const ALLOWED_IPS = ['3.127.166.71', '2a05:d014:a7d:8500:84ad:84a9:1b29:91d9']; // Replace with your Uptime Kuma server's IP
 
 export async function POST(req: Request) {
   // Get the IP address of the sender
