@@ -39,7 +39,8 @@ const config: Config = {
         'connect-red': '#F5284A',
         'second-text': '#888888',
         'light-red' : '#FDA4AF',
-        'tooltip-grey' : '#18191a'
+        'tooltip-grey' : '#18191a',
+        'primary' : '#F5284A'
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -51,9 +52,11 @@ const config: Config = {
       },
     },
   },
+
+
   plugins: [
-    //nextui(),
-    addVariablesForColors
+    nextui(),
+      //addVariablesForColors
   ],
 };
 

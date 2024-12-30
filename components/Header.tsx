@@ -50,7 +50,7 @@ const Header: React.FC = () => {
         "right-end",
       ];
 
-      const colors = ["default", "primary", "secondary", "success", "warning", "danger", "foreground"];
+      const colors = ["default", "primary", "secondary", "success", "warning", "danger", "foreground", "default2"];
 
     return (
         <div className={`sticky top-0 z-50 transition duration-500 ${isScrolled ? ' bg-opacity-70 backdrop-blur-sm' : ''}`}>
