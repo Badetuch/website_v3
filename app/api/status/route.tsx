@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 
 // Load environment variables from .env file
-dotenv.config();
+//dotenv.config();
 
 // Parse the ALLOWED_IPS environment variable into an array
 const ALLOWED_IPS = process.env.ALLOWED_IPS?.split(',') || [];
