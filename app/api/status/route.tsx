@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 // Store the status of monitors in memory
 const monitorStatuses = new Map<number, boolean>(); // Map<MonitorID, IsHealthy>
 
-const ALLOWED_IPS = ['localhost'];
+const ALLOWED_IPS = ['3.127.166.71', '2a05:d014:a7d:8500:84ad:84a9:1b29:91d9'];
 
 export async function POST(req: Request) {
   const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip');
