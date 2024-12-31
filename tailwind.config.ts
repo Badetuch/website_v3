@@ -19,6 +19,7 @@ function addVariablesForColors({ addBase, theme }: any) {
 }
 
 const config: Config = {
+  
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -40,7 +41,7 @@ const config: Config = {
         'second-text': '#888888',
         'light-red' : '#FDA4AF',
         'tooltip-grey' : '#18191a',
-        'primary' : '#F5284A'
+        'primary' : '#18191a'
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -56,7 +57,9 @@ const config: Config = {
 
   plugins: [
     addVariablesForColors,
-    nextui()
+    nextui({
+      addCommonColors: true,
+    })
   ],
 };
 

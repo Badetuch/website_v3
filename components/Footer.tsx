@@ -58,7 +58,7 @@ const Footer = () => {
             <div>
               <h2 className="mb-2 text-[20px] font-bold text-white">Links</h2>
               <ul className="text-[#686868] font-normal">
-                <Tooltip
+                {/* <Tooltip
                                         content={
                                             <div className="flex items-center justify-center h-full">
                                                 Coming soon
@@ -67,13 +67,13 @@ const Footer = () => {
                                     showArrow={true}
                                     placement="top"
                                     size="sm"
-                                    className="bg-tooltip-grey text-white rounded-md shadow-xl text-sm h-7 w-28">
+                                    className="bg-tooltip-grey text-white rounded-md shadow-xl text-sm h-7 w-28"> */}
                 <li className="hover:text-white">
                   <a href="https://status.badespeak.net/" target="_blank">
                     Status <span className={ status === 'Healthy' ? 'text-[#0070F3]' : 'text-[#F00] '}>• {status}</span>
                   </a>
                 </li>
-                </Tooltip>
+                {/* </Tooltip> */}
                 <li className="mb-1 hover:text-white">
                   <Link href="/rulebook">
                     Server Rulebook
