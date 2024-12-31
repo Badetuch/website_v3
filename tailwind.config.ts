@@ -10,7 +10,7 @@ const { nextui } = require('@nextui-org/react');
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, () => val]),
   );
  
   addBase({
@@ -55,8 +55,8 @@ const config: Config = {
 
 
   plugins: [
-    nextui(),
-      //addVariablesForColors
+    addVariablesForColors,
+    nextui()
   ],
 };
 

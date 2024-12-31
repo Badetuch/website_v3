@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 
-// Store the status of monitors in memory
-const monitorStatuses = new Map<number, boolean>(); // Map<MonitorID, IsHealthy>
+// Parse the ALLOWED_IPS environment variable into an array
+const ALLOWED_IPS = process.env.ALLOWED_IPS?.split(',') || [];
 
-const ALLOWED_IPS = ['3.127.166.71', '2a05:d014:a7d:8500:84ad:84a9:1b29:91d9'];
+const monitorStatuses = new Map<number, boolean>(); // Map<MonitorID, IsHealthy>
 
 export async function POST(req: Request) {
   const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip');
@@ -18,14 +18,12 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { heartbeat, monitor } = body;
 
-  // Log the complete incoming API request
   console.log('Incoming API POST payload:', JSON.stringify(body, null, 2));
 
   if (heartbeat && monitor) {
     const monitorID = heartbeat.monitorID;
     const status = heartbeat.status; // 0 for down, 1 for up
 
-    // Update the monitor's status
     monitorStatuses.set(monitorID, status === 1);
 
     console.log(`Monitor ${monitor.name} (${monitorID}) is now ${status === 1 ? 'healthy' : 'unhealthy'}`);
@@ -35,7 +33,6 @@ export async function POST(req: Request) {
 }
 
 export async function GET() {
-  // Determine the overall system status
   const isHealthy = Array.from(monitorStatuses.values()).every((status) => status);
   return NextResponse.json({ status: isHealthy ? 'healthy' : 'unhealthy' });
 }
