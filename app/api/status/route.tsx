@@ -1,9 +1,15 @@
 import { NextResponse } from 'next/server';
+import dotenv from 'dotenv';
 
-// Store the status of monitors in memory
+// Load environment variables from .env file
+dotenv.config();
+
+// Parse the ALLOWED_IPS environment variable into an array
+const ALLOWED_IPS = process.env.ALLOWED_IPS?.split(',') || [];
+
+console.log('Parsed ALLOWED_IPS:', ALLOWED_IPS);
+
 const monitorStatuses = new Map<number, boolean>(); // Map<MonitorID, IsHealthy>
-
-const ALLOWED_IPS = ['3.127.166.71', '2a05:d014:a7d:8500:84ad:84a9:1b29:91d9'];
 
 export async function POST(req: Request) {
   const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip');
