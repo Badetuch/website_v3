@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { TeamSpeak } from "ts3-nodejs-library";
 
+
+
 // Define the handler for the GET method
 export async function GET() {
   try {
