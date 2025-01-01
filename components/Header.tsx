@@ -7,13 +7,6 @@ import {Tooltip} from "@nextui-org/tooltip";
 import {Popover, PopoverTrigger, PopoverContent} from "@nextui-org/popover";
 import { connect } from "http2";
 
-const content = (
-    <PopoverContent>
-    <div className="items-center justify-center h-full ml-3">
-        <div className="text-small font-bold">Coming Soon</div>
-        <div className="text-tiny">Stay tuned <a href="https://x.com/badespeak" target="_blank" className="text-[#0070F3]">@badespeak</a></div></div>
-    </PopoverContent>
-    );
 
 const Header: React.FC = () => {
     const router = useRouter();
@@ -88,8 +81,18 @@ const Header: React.FC = () => {
                             <PopoverTrigger>
                                 <span className="cursor-pointer relative mr-2">Log In</span>
                             </PopoverTrigger>
-                            {content}
-                        </Popover>
+                            <PopoverContent>
+                                {(titleProps) => (
+                                    <div className="px-1 py-2">
+                                        <div className="text-small font-bold" {...titleProps}>
+                                        Coming Soon
+                                        </div>
+                                        <div className="text-tiny">Stay tuned <a href="https://x.com/badespeak" target="_blank" className="text-[#0070F3]">@badespeak</a>
+                                        </div>
+                                    </div>
+                                )}
+                                </PopoverContent>
+                            </Popover>
                     <button
                         type="button"
                         onClick={handleConnectClick}

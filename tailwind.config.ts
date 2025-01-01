@@ -56,10 +56,8 @@ const config: Config = {
 
 
   plugins: [
-    addVariablesForColors,
-    nextui({
-      addCommonColors: true,
-    })
+    nextui(),
+    addVariablesForColors
   ],
 };
 
