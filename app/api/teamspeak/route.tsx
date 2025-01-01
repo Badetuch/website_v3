@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import { TeamSpeak } from "ts3-nodejs-library";
 
+console.log('Teamspeak Host:', process.env.TEAMSPEAK_HOST);
+console.log('Teamspeak Queryport:', Number(process.env.TEAMSPEAK_QUERYPORT));
+console.log('Teamspeak Serverport:', Number(process.env.TEAMSPEAK_SERVERPORT));
+console.log('Teamspeak Username:',  process.env.TEAMSPEAK_USERNAME);
+console.log('Teamspeak Username:',  process.env.TEAMSPEAK_PASSWORD);
 
 
 // Define the handler for the GET method
