@@ -6,11 +6,11 @@ export async function GET() {
   try {
     // Connect to the TeamSpeak server
     const ts3 = await TeamSpeak.connect({
-      host: process.env.TEAMSPEAK_HOST || "localhost",
-      queryport: Number(process.env.TEAMSPEAK_QUERYPORT) || 10011,
-      serverport: Number(process.env.TEAMSPEAK_SERVERPORT) || 9987,
-      username: process.env.TEAMSPEAK_USERNAME || "onlineusers",
-      password: process.env.TEAMSPEAK_PASSWORD || "loZSD8R2",
+      host: process.env.TEAMSPEAK_HOST,
+      queryport: Number(process.env.TEAMSPEAK_QUERYPORT),
+      serverport: Number(process.env.TEAMSPEAK_SERVERPORT),
+      username: process.env.TEAMSPEAK_USERNAME,
+      password: process.env.TEAMSPEAK_PASSWORD,
     });
 
     // Fetch server information
